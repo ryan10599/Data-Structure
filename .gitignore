@@ -8,3 +8,8 @@
 /TestBST/build.xml
 !/TestBST/src
 /TestBST/build/
+/TestHashSet/nbproject/
+/TestHashSet/manifest.mf
+/TestHashSet/build.xml
+!/TestHashSet/src
+/TestHashSet/build/
