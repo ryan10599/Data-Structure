@@ -6,6 +6,7 @@
 package testhashset;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -56,6 +57,37 @@ public class TestHashSet {
 class NewStudent{
     private int id;
     private String name;
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 43 * hash + this.id;
+        hash = 43 * hash + Objects.hashCode(this.name);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final NewStudent other = (NewStudent) obj;
+        if (this.id != other.id) {
+            return false;
+        }
+        if (!Objects.equals(this.name, other.name)) {
+            return false;
+        }
+        return true;
+    }
+    
+    
 
     public NewStudent(int id, String name) {
         this.id = id;
