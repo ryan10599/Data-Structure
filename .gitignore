@@ -13,3 +13,8 @@
 /TestHashSet/build.xml
 !/TestHashSet/src
 /TestHashSet/build/
+/Pre-Midterm/nbproject/
+/Pre-Midterm/manifest.mf
+/Pre-Midterm/build.xml
+!/Pre-Midterm/src
+/Pre-Midterm/build/
