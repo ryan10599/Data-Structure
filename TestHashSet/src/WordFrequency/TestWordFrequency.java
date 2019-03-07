@@ -15,7 +15,7 @@ public class TestWordFrequency {
     public static void main(String[] args) {
         FrequencyCounter fc = new FrequencyCounter();
         try{
-            fc.process("/Users/ryan./Documents/GitHub/Data-Structure/TestHashSet/src/WordFrequency/data.txt");
+            fc.process("data.txt");
             System.out.println(fc);
         }catch(FileNotFoundException ex){
             System.out.println(ex);
