@@ -35,8 +35,49 @@ public class TestPriorityQueue {
         System.out.println("size: " + pq.size());
         System.out.println("first item in queue: " + pq.peek());
         System.out.println(pq);
+        testApply();
+    }
+    private static void testApply(){
+        PriorityQueue<Student> pq = new PriorityQueue();
+        pq.add(new Student(1001,"A",1.75));
+        pq.add(new Student(1007,"C",2.25));
+        pq.add(new Student(1008,"D",3.25));
+        pq.add(new Student(1011,"E",3.59));
+        pq.add(new Student(1021,"F",3.65));
+        pq.add(new Student(1031,"G",4.00));
+        pq.add(new Student(1051,"H",3.25));
+        for(Student student : pq){
+            System.out.println(student.id + ":"+ student.gpax);
+        }
+        while(!pq.isEmpty()){
+            System.out.print(pq.poll().gpax+",");
+        }
+        System.out.print("\b\b\n");
     }
 
+}
+
+class Student implements Comparable<Student>{
+    int id;
+    String name;
+    double gpax;
+    
+    public Student(int id, String name, double gpax){
+        this.id = id;
+        this.name = name;
+        this.gpax = gpax;
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        if(this.gpax < o.gpax){
+            return 1;
+        } else if (this.gpax > o.gpax){
+            return -1;
+        }
+        return 0;
+    }
+    
 }
 
 class MaxHeapComparator implements Comparator<Integer>{
