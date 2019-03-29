@@ -23,3 +23,8 @@
 /TestPriorityQueue/build.xml
 !/TestPriorityQueue/src
 /TestPriorityQueue/build/
+/INT320-Graph/nbproject/
+/INT320-Graph/manifest.mf
+/INT320-Graph/build.xml
+!/INT320-Graph/src
+/INT320-Graph/build/
